@@ -3,7 +3,7 @@ pipeline{
 
     stages{
         stage("BUILD"){
-            step{
+            steps{
                 sh '''
                 ./jenkins/build/mvn-build.sh mvn -B -DskipTests clean package
                 ./jenkins/build/build-image.sh
@@ -12,7 +12,7 @@ pipeline{
         }
 
         stage("TEST"){
-            step{
+            steps{
                 sh '''
                 ./jenkins/build/mvn-build.sh mvn test
                 '''
@@ -20,21 +20,18 @@ pipeline{
         }
 
         stage("PUSH"){
-            step{
+            steps{
                 sh '''
                 ./jenkins/push/push-image.sh
                 '''
             }
         }
         stage("PUBLISH"){
-            step{
+            steps{
                 sh '''
                 ./jenkins/deploy/deploy.sh
-
                 '''
             }
-
         }
     }
-
 }
