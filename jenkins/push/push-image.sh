@@ -1,7 +1,8 @@
 #!/bin/bash
 
 IMAGE="maven-project"
-BUILD_TAG="12"
+BUILD_TAG="13"
+PASS="andrejangela12"
 echo "*****************************"
 echo "** Logging into Docker Hub **"
 echo "*****************************"
