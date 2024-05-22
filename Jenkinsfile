@@ -6,7 +6,11 @@ pipeline{
     }
 
     stages{
-
+        stage("Cleanup"){
+             steps{
+                  cleanWs()
+             }
+        }
         stage("BUILD"){
             steps{
                 sh '''
@@ -39,10 +43,5 @@ pipeline{
             }
         }
 
-        stage("Cleanup"){
-             steps{
-                  cleanWs()
-             }
-        }
     }
 }
