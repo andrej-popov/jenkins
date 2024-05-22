@@ -6,11 +6,6 @@ pipeline{
     }
 
     stages{
-        stage("Cleanup"){
-            steps{
-                cleanWs()
-            }
-        }
 
         stage("BUILD"){
             steps{
@@ -42,6 +37,12 @@ pipeline{
                 ./jenkins/deploy/deploy.sh
                 '''
             }
+        }
+
+        stage("Cleanup"){
+             steps{
+                  cleanWs()
+             }
         }
     }
 }
