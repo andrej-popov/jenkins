@@ -4,7 +4,7 @@ echo "************************"
 echo "**** BUILDING A JAR ****"
 echo "************************"
 
-WORKSPACE=/var/jenkins_home/workspace/pipeline-maven-docker
+WORKSPACE=/mnt/workspace/pipeline-maven-docker
 #echo $WORKSPACE
 #echo "pwd: $(pwd)"
 
