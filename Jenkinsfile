@@ -3,6 +3,7 @@ pipeline{
 
     environment{
         PASS = credentials('docker_hub_pass')
+        IMAGE = "maven-project"
     }
 
     stages{

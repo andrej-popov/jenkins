@@ -1,7 +1,7 @@
 #!/bin/bash
 
 IMAGE="maven-project"
-BUILD_TAG="15"
+
 
 echo "*****************************"
 echo "** Logging into Docker Hub **"
@@ -13,10 +13,10 @@ echo "*****************************"
 echo "**  Tagging Docker image  **"
 echo "*****************************"
 
-docker tag $IMAGE:$BUILD_TAG andrejpopov/$IMAGE:$BUILD_TAG
+docker tag $IMAGE:$TAG andrejpopov/$IMAGE:$TAG
 
 echo "*****************************"
 echo "**  Pushing to Docker Hub  **"
 echo "*****************************"
 
-docker push andrejpopov/$IMAGE:$BUILD_TAG
+docker push andrejpopov/$IMAGE:$TAG
